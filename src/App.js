@@ -12,7 +12,6 @@ function App() {
   const classes = useStyles();
   const qrRef = useRef(null);
 
-
   const generateQrCode = async () => {
     try {
           const response = await QRCode.toDataURL(text);
@@ -43,7 +42,7 @@ function App() {
   return (
     <Container className={classes.conatiner}>
           <Card>
-              <h2 className={classes.title}>Generate Download & Scan QR Code with React js</h2>
+              <h2 className={classes.title}>Generate Download & Scan QR Code</h2>
               <CardContent>
                   <Grid container spacing={2}>
                       <Grid item xl={4} lg={4} md={6} sm={12} xs={12}>
@@ -89,13 +88,14 @@ function App() {
 
 const useStyles = makeStyles((theme) => ({
     conatiner: {
-      marginTop: 10
+      marginTop: 10,
+      background:'#6FDFDF'
     },
     title: {
       display: 'flex',
       justifyContent: 'center',
       alignItems:  'center',
-      background: '#3f51b5',
+      background: '#B4E197',
       color: '#fff',
       padding: 20
     },
